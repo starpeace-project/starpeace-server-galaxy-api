@@ -1,0 +1,141 @@
+get:
+  summary: Retrieve bookmarks for a Corporation
+  operationId: list-corporation-bookmarks
+  tags:
+    - corporation
+    - bookmark
+
+  parameters:
+    - name: corporationId
+      in: path
+      required: true
+      description: ID of Corporation
+      schema:
+        type: string
+
+  responses:
+    '200':
+      description: Bookmarks for Corporation
+      content:
+        application/json:
+          schema:
+            type: list
+            items:
+              $ref: "../openapi.yaml#/components/schemas/Bookmark"
+
+    default:
+      description: unexpected error
+      content:
+        application/json:
+          schema:
+            $ref: "../openapi.yaml#/components/schemas/Error"
+
+post:
+  summary: Create bookmark for Corporation
+  operationId: create-corporation-bookmark
+  tags:
+    - corporation
+    - bookmark
+
+  parameters:
+    - name: corporationId
+      in: path
+      required: true
+      description: ID of Corporation
+      schema:
+        type: string
+
+    - name: type
+      in: query
+      required: true
+      description: Type of Bookmark
+      schema:
+        type: string
+        enum: [BUILDING, FOLDER, LOCATION]
+    - name: parent_id
+      in: query
+      required: true
+      description: Parent Id of Bookmark
+      schema:
+        type: string
+    - name: name
+      in: query
+      required: true
+      description: Name of Bookmark
+      schema:
+        type: string
+
+    - name: map_x
+      in: query
+      required: false
+      description: Map X coordinate of Bookmark
+      schema:
+        type: string
+    - name: map_y
+      in: query
+      required: false
+      description: Map Y coordinate of Bookmark
+      schema:
+        type: string
+    - name: building_id
+      in: query
+      required: false
+      description: BuildingId of Bookmark
+      schema:
+        type: string
+
+  responses:
+    '200':
+      description: Created Bookmark for Corporation
+      content:
+        application/json:
+          schema:
+            $ref: "../openapi.yaml#/components/schemas/Bookmark"
+
+    default:
+      description: unexpected error
+      content:
+        application/json:
+          schema:
+            $ref: "../openapi.yaml#/components/schemas/Error"
+
+patch:
+  summary: Update bookmarks for Corporation
+  operationId: update-corporation-bookmarks
+  tags:
+    - corporation
+    - bookmark
+
+  parameters:
+    - name: corporationId
+      in: path
+      required: true
+      description: ID of Corporation
+      schema:
+        type: string
+
+    - name: deltas
+      in: query
+      required: true
+      description: Bookmark updates to apply
+      schema:
+        type: list
+        items:
+          $ref: "../openapi.yaml#/components/schemas/BookmarkDelta"
+
+  responses:
+    '200':
+      description: Updated Bookmarks for Corporation
+      content:
+        application/json:
+          schema:
+            type: list
+            items:
+                $ref: "../openapi.yaml#/components/schemas/Bookmark"
+
+    default:
+      description: unexpected error
+      content:
+        application/json:
+          schema:
+            $ref: "../openapi.yaml#/components/schemas/Error"

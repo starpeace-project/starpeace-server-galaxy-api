@@ -1,0 +1,12 @@
+type: object
+required:
+  - id
+
+properties:
+  id:
+    type: string
+  parent_id:
+    type: string
+  order:
+    type: integer
+    format: int32

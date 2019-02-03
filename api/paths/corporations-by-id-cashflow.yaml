@@ -1,0 +1,29 @@
+get:
+  summary: Retrieve cashflow information for a Corporation
+  operationId: get-corporation-cashflow
+  tags:
+    - corporation
+    - cashflow
+
+  parameters:
+    - name: corporationId
+      in: path
+      required: true
+      description: ID of Corporation
+      schema:
+        type: string
+
+  responses:
+    '200':
+      description: Cashflow for Corporation
+      content:
+        application/json:
+          schema:
+            $ref: "../openapi.yaml#/components/schemas/CorporationCashflow"
+
+    default:
+      description: unexpected error
+      content:
+        application/json:
+          schema:
+            $ref: "../openapi.yaml#/components/schemas/Error"

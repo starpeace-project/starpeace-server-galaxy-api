@@ -1,0 +1,75 @@
+put:
+  summary: Start invention research for a Company
+  operationId: research-company-invention
+  tags:
+    - company
+    - inventions
+
+  parameters:
+    - name: companyId
+      in: path
+      required: true
+      description: ID of Company
+      schema:
+        type: string
+    - name: inventionId
+      in: path
+      required: true
+      description: ID of Invention
+      schema:
+        type: string
+
+  responses:
+    '200':
+      description: Inventions for Company after starting research
+      content:
+        application/json:
+          schema:
+            type: list
+            items:
+              $ref: "../openapi.yaml#/components/schemas/Invention"
+
+    default:
+      description: unexpected error
+      content:
+        application/json:
+          schema:
+            $ref: "../openapi.yaml#/components/schemas/Error"
+
+delete:
+  summary: Sell or cancel research of invention for a Company
+  operationId: sell-company-invention
+  tags:
+    - company
+    - inventions
+
+  parameters:
+    - name: companyId
+      in: path
+      required: true
+      description: ID of Company
+      schema:
+        type: string
+    - name: inventionId
+      in: path
+      required: true
+      description: ID of Invention
+      schema:
+        type: string
+
+  responses:
+    '200':
+      description: Inventions for Company after selling or canceling research
+      content:
+        application/json:
+          schema:
+            type: list
+            items:
+              $ref: "../openapi.yaml#/components/schemas/Invention"
+
+    default:
+      description: unexpected error
+      content:
+        application/json:
+          schema:
+            $ref: "../openapi.yaml#/components/schemas/Error"

@@ -1,0 +1,35 @@
+get:
+  summary: Retrieve details for a Planet
+  operationId: get-planet-events
+  tags:
+    - planet
+
+  parameters:
+    - name: planetId
+      in: path
+      required: true
+      description: ID of Planet
+      schema:
+        type: string
+    - name: last_update
+      in: query
+      description: Lower-bound timestamp for planet events
+      required: true
+      schema:
+        type: string
+        format: date-time
+
+  responses:
+    '200':
+      description: Planet events
+      content:
+        application/json:
+          schema:
+            $ref: "../openapi.yaml#/components/schemas/PlanetEvents"
+
+    default:
+      description: unexpected error
+      content:
+        application/json:
+          schema:
+            $ref: "../openapi.yaml#/components/schemas/Error"

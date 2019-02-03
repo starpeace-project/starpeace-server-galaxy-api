@@ -1,0 +1,31 @@
+get:
+  summary: Retrieve inventions for a Company
+  operationId: list-company-inventions
+  tags:
+    - company
+    - inventions
+
+  parameters:
+    - name: companyId
+      in: path
+      required: true
+      description: ID of Company
+      schema:
+        type: string
+
+  responses:
+    '200':
+      description: Inventions for Company
+      content:
+        application/json:
+          schema:
+            type: list
+            items:
+              $ref: "../openapi.yaml#/components/schemas/Invention"
+
+    default:
+      description: unexpected error
+      content:
+        application/json:
+          schema:
+            $ref: "../openapi.yaml#/components/schemas/Error"

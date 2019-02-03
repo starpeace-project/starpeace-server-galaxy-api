@@ -1,0 +1,24 @@
+type: object
+required:
+  - id
+  - name
+  - seal_id
+  - building_id
+  - map_x
+  - map_y
+
+properties:
+  id:
+    type: string
+  name:
+    type: string
+  seal_id:
+    type: string
+  building_id:
+    type: string
+  map_x:
+    type: integer
+    format: int32
+  map_y:
+    type: integer
+    format: int32

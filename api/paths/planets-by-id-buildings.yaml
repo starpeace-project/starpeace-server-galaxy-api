@@ -1,0 +1,109 @@
+get:
+  summary: Retrieve buildings for map chunk within planet
+  operationId: list-planet-buildings
+  tags:
+    - planet
+    - building
+
+  parameters:
+    - name: planetId
+      in: path
+      required: true
+      description: ID of Planet
+      schema:
+        type: string
+    - name: chunk_x
+      in: query
+      description: Map chunk X coordinate
+      required: true
+      schema:
+        type: integer
+        format: int32
+    - name: chunk_y
+      in: query
+      description: Map chunk Y coordinate
+      required: true
+      schema:
+        type: integer
+        format: int32
+
+  responses:
+    '200':
+      description: Planet events
+      content:
+        application/json:
+          schema:
+            type: list
+            items:
+              $ref: "../openapi.yaml#/components/schemas/Building"
+
+    default:
+      description: unexpected error
+      content:
+        application/json:
+          schema:
+            $ref: "../openapi.yaml#/components/schemas/Error"
+
+post:
+  summary: Start Building construction within planet
+  operationId: construct-planet-building
+  tags:
+    - planet
+    - building
+
+  parameters:
+    - name: planetId
+      in: path
+      required: true
+      description: ID of Planet
+      schema:
+        type: string
+
+    - name: company_id
+      in: query
+      required: true
+      description: ID of constructing Company
+      schema:
+        type: string
+    - name: definition_id
+      in: query
+      required: true
+      description: Building Definition ID
+      schema:
+        type: string
+    - name: name
+      in: query
+      required: true
+      description: Name of Building
+      schema:
+        type: string
+
+    - name: map_x
+      in: query
+      description: Map X coordinate
+      required: true
+      schema:
+        type: integer
+        format: int32
+    - name: map_y
+      in: query
+      description: Map Y coordinate
+      required: true
+      schema:
+        type: integer
+        format: int32
+
+  responses:
+    '200':
+      description: Constructed Building
+      content:
+        application/json:
+          schema:
+            $ref: "../openapi.yaml#/components/schemas/Building"
+
+    default:
+      description: unexpected error
+      content:
+        application/json:
+          schema:
+            $ref: "../openapi.yaml#/components/schemas/Error"

@@ -1,0 +1,15 @@
+{
+  "name": "@starpeace/starpeace-server-galaxy-api",
+  "version": "0.1.0",
+  "description": "API interface schema for STARPEACE Galaxy game-play and simulation server",
+  "author": "starpeace-project",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/starpeace-project/starpeace-server-galaxy-api.git"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.3",
+    "swagger-parser": "^6.0.5"
+  }
+}

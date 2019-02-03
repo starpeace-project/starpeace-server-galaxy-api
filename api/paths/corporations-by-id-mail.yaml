@@ -1,0 +1,31 @@
+get:
+  summary: Retrieve Mail for a Corporation
+  operationId: list-corporation-mail
+  tags:
+    - corporation
+    - mail
+
+  parameters:
+    - name: corporationId
+      in: path
+      required: true
+      description: ID of Corporation
+      schema:
+        type: string
+
+  responses:
+    '200':
+      description: Mail for Corporation
+      content:
+        application/json:
+          schema:
+            type: list
+            items:
+              $ref: "../openapi.yaml#/components/schemas/Mail"
+
+    default:
+      description: unexpected error
+      content:
+        application/json:
+          schema:
+            $ref: "../openapi.yaml#/components/schemas/Error"

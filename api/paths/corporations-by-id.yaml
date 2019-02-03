@@ -1,0 +1,28 @@
+get:
+  summary: Retrieve information for a Corporation
+  operationId: get-corporation
+  tags:
+    - corporation
+
+  parameters:
+    - name: corporationId
+      in: path
+      required: true
+      description: ID of Corporation
+      schema:
+        type: string
+
+  responses:
+    '200':
+      description: Corporation information
+      content:
+        application/json:
+          schema:
+            $ref: "../openapi.yaml#/components/schemas/Corporation"
+
+    default:
+      description: unexpected error
+      content:
+        application/json:
+          schema:
+            $ref: "../openapi.yaml#/components/schemas/Error"

@@ -1,0 +1,96 @@
+openapi: "3.0.0"
+info:
+  version: 0.1.0
+  title: STARPEACE Galaxy
+  description: >-
+    STARPEACE Galaxy API (SPGAPI) provides support for players to retrieve
+    game-play information and interact with simulation game engine. API
+    also defines support for admin simulation and community management.
+  license:
+    name: MIT
+  contact:
+    name: STARPEACE Project
+    url: 'https://www.starpeace-project.com'
+
+paths:
+  /galaxy:
+    $ref: './paths/galaxy.yaml'
+
+  /galaxy/session:
+    $ref: './paths/galaxy-session.yaml'
+
+
+  /planets/{planetId}/buildings:
+    $ref: './paths/planets-by-id-buildings.yaml'
+
+  /planets/{planetId}/buildings/{buildingId}:
+    $ref: './paths/planets-by-id-buildings-by-id.yaml'
+
+  /planets/{planetId}/events:
+    $ref: './paths/planets-by-id-events.yaml'
+
+  /planets/{planetId}/online:
+    $ref: './paths/planets-by-id-online.yaml'
+
+  /planets/{planetId}/towns:
+    $ref: './paths/planets-by-id-towns.yaml'
+
+
+  /tycoons/{tycoonId}:
+    $ref: './paths/tycoons-by-id.yaml'
+
+
+  /corporations/{corporationId}:
+    $ref: './paths/corporations-by-id.yaml'
+
+  /corporations/{corporationId}/bookmarks:
+    $ref: './paths/corporations-by-id-bookmarks.yaml'
+
+  /corporations/{corporationId}/cashflow:
+    $ref: './paths/corporations-by-id-cashflow.yaml'
+
+  /corporations/{corporationId}/mail:
+    $ref: './paths/corporations-by-id-mail.yaml'
+
+
+  /companies/{companyId}/buildings:
+    $ref: './paths/companies-by-id-buildings.yaml'
+
+  /companies/{companyId}/inventions:
+    $ref: './paths/companies-by-id-inventions.yaml'
+
+  /companies/{companyId}/inventions/{inventionId}:
+    $ref: './paths/companies-by-id-inventions-by-id.yaml'
+
+components:
+  schemas:
+    Bookmark:
+      $ref: './schemas/Bookmark.yaml'
+    BookmarkDelta:
+      $ref: './schemas/BookmarkDelta.yaml'
+    Building:
+      $ref: './schemas/Building.yaml'
+    Company:
+      $ref: './schemas/Company.yaml'
+    Corporation:
+      $ref: './schemas/Corporation.yaml'
+    CorporationCashflow:
+      $ref: './schemas/CorporationCashflow.yaml'
+    Error:
+      $ref: './schemas/Error.yaml'
+    Galaxy:
+      $ref: './schemas/Galaxy.yaml'
+    Invention:
+      $ref: './schemas/Invention.yaml'
+    Mail:
+      $ref: './schemas/Mail.yaml'
+    Planet:
+      $ref: './schemas/Planet.yaml'
+    PlanetEvents:
+      $ref: './schemas/PlanetEvents.yaml'
+    Session:
+      $ref: './schemas/Session.yaml'
+    Town:
+      $ref: './schemas/Town.yaml'
+    Tycoon:
+      $ref: './schemas/Tycoon.yaml'

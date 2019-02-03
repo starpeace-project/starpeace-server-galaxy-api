@@ -1,0 +1,27 @@
+type: object
+required:
+  - id
+  - name
+  - visitor_enabled
+  - tycoon_enabled
+  - tycoon_authentication
+
+properties:
+  id:
+    type: string
+  name:
+    type: string
+
+  visitor_enabled:
+    type: boolean
+  tycoon_enabled:
+    type: boolean
+
+  tycoon_authentication:
+    type: string
+    enum: [password]
+
+  planets:
+    type: array
+    items:
+      $ref: "../openapi.yaml#/components/schemas/Planet"

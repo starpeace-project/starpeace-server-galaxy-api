@@ -1,0 +1,31 @@
+get:
+  summary: Retrieve Buildings for a Company
+  operationId: list-company-buildings
+  tags:
+    - company
+    - buildings
+
+  parameters:
+    - name: companyId
+      in: path
+      required: true
+      description: ID of Company
+      schema:
+        type: string
+
+  responses:
+    '200':
+      description: Buildings for Company
+      content:
+        application/json:
+          schema:
+            type: list
+            items:
+              $ref: "../openapi.yaml#/components/schemas/Building"
+
+    default:
+      description: unexpected error
+      content:
+        application/json:
+          schema:
+            $ref: "../openapi.yaml#/components/schemas/Error"

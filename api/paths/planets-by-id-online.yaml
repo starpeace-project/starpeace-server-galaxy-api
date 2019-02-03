@@ -1,0 +1,30 @@
+get:
+  summary: Retrieve online Corporations for a Planet
+  operationId: list-planet-online-corporations
+  tags:
+    - planet
+
+  parameters:
+    - name: planetId
+      in: path
+      required: true
+      description: ID of Planet
+      schema:
+        type: string
+
+  responses:
+    '200':
+      description: Corporations online for Planet
+      content:
+        application/json:
+          schema:
+            type: list
+            items:
+              $ref: "../openapi.yaml#/components/schemas/Corporation"
+
+    default:
+      description: unexpected error
+      content:
+        application/json:
+          schema:
+            $ref: "../openapi.yaml#/components/schemas/Error"
