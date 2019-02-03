@@ -19,7 +19,7 @@ get:
       content:
         application/json:
           schema:
-            type: list
+            type: array
             items:
               $ref: "../openapi.yaml#/components/schemas/Bookmark"
 
@@ -119,7 +119,7 @@ patch:
       required: true
       description: Bookmark updates to apply
       schema:
-        type: list
+        type: array
         items:
           $ref: "../openapi.yaml#/components/schemas/BookmarkDelta"
 
@@ -129,7 +129,7 @@ patch:
       content:
         application/json:
           schema:
-            type: list
+            type: array
             items:
                 $ref: "../openapi.yaml#/components/schemas/Bookmark"
 

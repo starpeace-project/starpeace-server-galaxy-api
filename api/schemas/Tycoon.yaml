@@ -10,6 +10,6 @@ properties:
     type: string
 
   corporations:
-    type: list
+    type: array
     items:
       $ref: "../openapi.yaml#/components/schemas/Corporation"

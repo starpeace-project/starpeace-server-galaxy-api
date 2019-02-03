@@ -1,6 +1,6 @@
 openapi: "3.0.0"
 info:
-  version: 0.1.0
+  version: 0.1.1
   title: STARPEACE Galaxy
   description: >-
     STARPEACE Galaxy API (SPGAPI) provides support for players to retrieve
@@ -11,6 +11,11 @@ info:
   contact:
     name: STARPEACE Project
     url: 'https://www.starpeace-project.com'
+
+
+servers:
+  - url: http://localhost
+
 
 paths:
   /galaxy:
@@ -61,6 +66,7 @@ paths:
 
   /companies/{companyId}/inventions/{inventionId}:
     $ref: './paths/companies-by-id-inventions-by-id.yaml'
+
 
 components:
   schemas:
