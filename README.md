@@ -8,7 +8,7 @@ API interface schema for STARPEACE Galaxy game-play and simulation server.
 
 ## Official Documentation
 
-Auto-generated API documentation can be found on the [STARPEACE documentation website](https://docs.starpeace.io/api/galaxy).
+Auto-generated documentation for STARPEACE Galaxy API can be found on the [STARPEACE Project website](https://www.starpeace-project.com/api/galaxy).
 
 ## Security Vulnerabilities
 
@@ -20,7 +20,7 @@ If you discover a security vulnerability within the STARPEACE API, please send a
 
 ## Clients
 
-* [starpeace-website-client](https://github.com/starpeace-project/starpeace-website-client) - official community STARPEACE browser-based client; [client.starpeace.io](https://client.starpeace.io)
+* [starpeace-website-client](https://github.com/starpeace-project/starpeace-website-client) - official community STARPEACE browser-based client [client.starpeace.io](https://client.starpeace.io)
 
 ## License
 
