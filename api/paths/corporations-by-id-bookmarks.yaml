@@ -34,8 +34,8 @@ post:
   summary: Create bookmark for Corporation
   operationId: create-corporation-bookmark
   tags:
-    - corporation
-    - bookmark
+    - corporations
+    - bookmarks
 
   parameters:
     - name: corporationId
@@ -103,8 +103,8 @@ patch:
   summary: Update bookmarks for Corporation
   operationId: update-corporation-bookmarks
   tags:
-    - corporation
-    - bookmark
+    - corporations
+    - bookmarks
 
   parameters:
     - name: corporationId

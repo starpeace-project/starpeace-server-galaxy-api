@@ -40,7 +40,7 @@ delete:
   summary: Sell or cancel research of invention for a Company
   operationId: sell-company-invention
   tags:
-    - company
+    - companies
     - inventions
 
   parameters:

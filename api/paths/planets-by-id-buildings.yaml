@@ -49,7 +49,7 @@ post:
   operationId: construct-planet-building
   tags:
     - planet
-    - building
+    - buildings
 
   parameters:
     - name: planetId
