@@ -3,6 +3,7 @@ get:
   operationId: get-planet-events
   tags:
     - planet
+    - events
 
   parameters:
     - name: planetId

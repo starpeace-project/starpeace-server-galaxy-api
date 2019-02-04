@@ -3,7 +3,7 @@ get:
   operationId: get-corporation-cashflow
   tags:
     - corporations
-    - cashflow
+    - events
 
   parameters:
     - name: corporationId
