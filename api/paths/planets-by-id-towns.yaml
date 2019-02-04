@@ -3,6 +3,7 @@ get:
   operationId: list-planet-towns
   tags:
     - planet
+    - towns
 
   parameters:
     - name: planetId
@@ -11,7 +12,7 @@ get:
       description: ID of Planet
       schema:
         type: string
-    - name: last_update
+    - name: lastUpdate
       in: query
       description: Lower-bound timestamp for planet events
       required: true

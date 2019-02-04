@@ -2,7 +2,7 @@ get:
   summary: Retrieve Buildings for a Company
   operationId: list-company-buildings
   tags:
-    - company
+    - companies
     - buildings
 
   parameters:

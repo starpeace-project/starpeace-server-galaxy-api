@@ -3,17 +3,16 @@ get:
   operationId: new-session
   tags:
     - galaxy
-    - session
 
   parameters:
-    - name: identity_type
+    - name: identityType
       in: query
       description: Identity type for session
       required: true
       schema:
         type: string
         enum: [visitor, tycoon]
-    - name: auth_token
+    - name: authToken
       in: query
       description: Authentication token for session
       required: true

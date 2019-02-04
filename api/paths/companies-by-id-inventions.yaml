@@ -2,7 +2,7 @@ get:
   summary: Retrieve inventions for a Company
   operationId: list-company-inventions
   tags:
-    - company
+    - companies
     - inventions
 
   parameters:

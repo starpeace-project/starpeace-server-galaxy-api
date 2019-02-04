@@ -2,23 +2,23 @@ type: object
 required:
   - id
   - name
-  - seal_id
-  - building_id
-  - map_x
-  - map_y
+  - sealId
+  - buildingId
+  - mapX
+  - mapY
 
 properties:
   id:
     type: string
   name:
     type: string
-  seal_id:
+  sealId:
     type: string
-  building_id:
+  buildingId:
     type: string
-  map_x:
+  mapX:
     type: integer
     format: int32
-  map_y:
+  mapY:
     type: integer
     format: int32

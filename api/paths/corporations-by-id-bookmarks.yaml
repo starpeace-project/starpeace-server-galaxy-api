@@ -2,8 +2,8 @@ get:
   summary: Retrieve bookmarks for a Corporation
   operationId: list-corporation-bookmarks
   tags:
-    - corporation
-    - bookmark
+    - corporations
+    - bookmarks
 
   parameters:
     - name: corporationId
@@ -52,7 +52,7 @@ post:
       schema:
         type: string
         enum: [BUILDING, FOLDER, LOCATION]
-    - name: parent_id
+    - name: parentId
       in: query
       required: true
       description: Parent Id of Bookmark
@@ -65,19 +65,19 @@ post:
       schema:
         type: string
 
-    - name: map_x
+    - name: mapX
       in: query
       required: false
       description: Map X coordinate of Bookmark
       schema:
         type: string
-    - name: map_y
+    - name: mapY
       in: query
       required: false
       description: Map Y coordinate of Bookmark
       schema:
         type: string
-    - name: building_id
+    - name: buildingId
       in: query
       required: false
       description: BuildingId of Bookmark

@@ -5,7 +5,7 @@ required:
 properties:
   id:
     type: string
-  parent_id:
+  parentId:
     type: string
   order:
     type: integer

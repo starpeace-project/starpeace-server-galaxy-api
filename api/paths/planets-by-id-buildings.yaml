@@ -3,7 +3,7 @@ get:
   operationId: list-planet-buildings
   tags:
     - planet
-    - building
+    - buildings
 
   parameters:
     - name: planetId
@@ -12,14 +12,14 @@ get:
       description: ID of Planet
       schema:
         type: string
-    - name: chunk_x
+    - name: chunkX
       in: query
       description: Map chunk X coordinate
       required: true
       schema:
         type: integer
         format: int32
-    - name: chunk_y
+    - name: chunkY
       in: query
       description: Map chunk Y coordinate
       required: true
@@ -59,13 +59,13 @@ post:
       schema:
         type: string
 
-    - name: company_id
+    - name: companyId
       in: query
       required: true
       description: ID of constructing Company
       schema:
         type: string
-    - name: definition_id
+    - name: definitionId
       in: query
       required: true
       description: Building Definition ID
@@ -78,14 +78,14 @@ post:
       schema:
         type: string
 
-    - name: map_x
+    - name: mapX
       in: query
       description: Map X coordinate
       required: true
       schema:
         type: integer
         format: int32
-    - name: map_y
+    - name: mapY
       in: query
       description: Map Y coordinate
       required: true

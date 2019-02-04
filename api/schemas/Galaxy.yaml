@@ -2,9 +2,9 @@ type: object
 required:
   - id
   - name
-  - visitor_enabled
-  - tycoon_enabled
-  - tycoon_authentication
+  - visitorEnabled
+  - tycoonEnabled
+  - tycoonAuthentication
 
 properties:
   id:
@@ -12,12 +12,12 @@ properties:
   name:
     type: string
 
-  visitor_enabled:
+  visitorEnabled:
     type: boolean
-  tycoon_enabled:
+  tycoonEnabled:
     type: boolean
 
-  tycoon_authentication:
+  tycoonAuthentication:
     type: string
     enum: [password]
 

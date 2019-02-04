@@ -2,7 +2,7 @@ get:
   summary: Retrieve information for a Corporation
   operationId: get-corporation
   tags:
-    - corporation
+    - corporations
 
   parameters:
     - name: corporationId

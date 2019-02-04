@@ -3,7 +3,7 @@ get:
   operationId: get-planet-building
   tags:
     - planet
-    - building
+    - buildings
 
   parameters:
     - name: planetId

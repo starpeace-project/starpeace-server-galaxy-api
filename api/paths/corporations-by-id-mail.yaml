@@ -2,7 +2,7 @@ get:
   summary: Retrieve Mail for a Corporation
   operationId: list-corporation-mail
   tags:
-    - corporation
+    - corporations
     - mail
 
   parameters:

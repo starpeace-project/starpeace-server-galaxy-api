@@ -1,8 +1,8 @@
 required:
-  - session_token
+  - sessionToken
 
 properties:
-  session_token:
+  sessionToken:
     type: string
-  tycoon_id:
+  tycoonId:
     type: string

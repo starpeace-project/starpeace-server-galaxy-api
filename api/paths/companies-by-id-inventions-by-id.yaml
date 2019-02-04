@@ -2,7 +2,7 @@ put:
   summary: Start invention research for a Company
   operationId: research-company-invention
   tags:
-    - company
+    - companies
     - inventions
 
   parameters:

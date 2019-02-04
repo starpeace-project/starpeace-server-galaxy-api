@@ -2,43 +2,43 @@ type: object
 required:
   - id
   - name
-  - system_name
+  - systemName
   - enabled
-  - planet_type
-  - planet_width
-  - planet_height
-  - map_id
+  - planetType
+  - planetWidth
+  - planetHeight
+  - mapId
 
 properties:
   id:
     type: string
   name:
     type: string
-  system_name:
+  systemName:
     type: string
   enabled:
     type: boolean
 
-  planet_type:
+  planetType:
     type: string
-  planet_width:
+  planetWidth:
     type: integer
     format: int32
-  planet_height:
+  planetHeight:
     type: integer
     format: int32
-  map_id:
+  mapId:
     type: string
 
   population:
     type: integer
     format: int64
-  investment_value:
+  investmentValue:
     type: integer
     format: int64
-  tycoons_online:
+  tycoonCount:
     type: integer
     format: int32
-  online_count:
+  onlineCount:
     type: integer
     format: int32

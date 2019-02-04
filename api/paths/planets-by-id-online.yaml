@@ -3,6 +3,7 @@ get:
   operationId: list-planet-online-corporations
   tags:
     - planet
+    - corporations
 
   parameters:
     - name: planetId

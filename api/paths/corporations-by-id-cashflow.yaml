@@ -2,7 +2,7 @@ get:
   summary: Retrieve cashflow information for a Corporation
   operationId: get-corporation-cashflow
   tags:
-    - corporation
+    - corporations
     - cashflow
 
   parameters:

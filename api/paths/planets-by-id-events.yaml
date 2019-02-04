@@ -1,5 +1,5 @@
 get:
-  summary: Retrieve details for a Planet
+  summary: Retrieve current Planet state and any planet-wide events since lastUpdate
   operationId: get-planet-events
   tags:
     - planet
@@ -11,7 +11,7 @@ get:
       description: ID of Planet
       schema:
         type: string
-    - name: last_update
+    - name: lastUpdate
       in: query
       description: Lower-bound timestamp for planet events
       required: true
@@ -21,7 +21,7 @@ get:
 
   responses:
     '200':
-      description: Planet events
+      description: Planet state at request and any planet-wide events since lastUpdate
       content:
         application/json:
           schema:

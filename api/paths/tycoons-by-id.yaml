@@ -2,7 +2,7 @@ get:
   summary: Retrieve information for a Tycoon
   operationId: get-tycoon
   tags:
-    - tycoon
+    - tycoons
 
   parameters:
     - name: tycoonId

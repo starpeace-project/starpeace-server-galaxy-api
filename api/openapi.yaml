@@ -1,6 +1,6 @@
 openapi: "3.0.0"
 info:
-  version: 0.1.1
+  version: 0.1.2
   title: STARPEACE Galaxy
   description: >-
     STARPEACE Galaxy API (SPGAPI) provides support for players to retrieve
