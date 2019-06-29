@@ -1,9 +1,9 @@
 openapi: "3.0.0"
 info:
   version: 0.1.4
-  title: STARPEACE Galaxy
+  title: STARPEACE Multiverse
   description: >-
-    STARPEACE Galaxy API (SPGAPI) provides support for players to retrieve
+    STARPEACE Multiverse API (SPMAPI) provides support for players to retrieve
     game-play information and interact with simulation game engine. API
     also defines support for admin simulation and community management.
   license:
