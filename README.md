@@ -16,7 +16,7 @@ If you discover a security vulnerability within the STARPEACE API, please send a
 
 ## Implementations
 
-* [starpeace-server-galaxy-nodejs](https://github.com/starpeace-project/starpeace-server-multiverse-nodejs) - NodeJS implementation using express
+* [starpeace-server-multiverse-nodejs](https://github.com/starpeace-project/starpeace-server-multiverse-nodejs) - NodeJS implementation using express
 
 ## Clients
 
@@ -24,4 +24,4 @@ If you discover a security vulnerability within the STARPEACE API, please send a
 
 ## License
 
-starpeace-server-galaxy-api is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+starpeace-server-multiverse-api is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
