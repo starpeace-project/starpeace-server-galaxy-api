@@ -1,4 +1,4 @@
-# starpeace-server-galaxy-api
+# starpeace-server-multiverse-api
 
 [![GitHub release](https://img.shields.io/github/release/starpeace-project/starpeace-server-multiverse-api.svg)](https://github.com/starpeace-project/starpeace-server-multiverse-api/releases/)
 [![Build Status](https://travis-ci.org/starpeace-project/starpeace-server-multiverse-api.svg)](https://travis-ci.org/starpeace-project/starpeace-server-multiverse-api)
