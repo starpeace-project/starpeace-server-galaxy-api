@@ -1,0 +1,21 @@
+type: object
+required:
+  - id
+  - nameShort
+  - nameLong
+  - buildingDefinitionIds
+
+properties:
+  id:
+    type: string
+
+  nameShort:
+    type: string
+
+  nameLong:
+    type: string
+
+  buildingDefinitionIds:
+    type: array
+    items:
+      type: string

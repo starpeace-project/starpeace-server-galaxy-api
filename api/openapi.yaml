@@ -1,6 +1,6 @@
 openapi: "3.0.0"
 info:
-  version: 0.1.4
+  version: 0.1.6
   title: STARPEACE Multiverse
   description: >-
     STARPEACE Multiverse API (SPMAPI) provides support for players to retrieve
@@ -33,6 +33,15 @@ paths:
 
   /planets/{planetId}/events:
     $ref: './paths/planets-by-id-events.yaml'
+
+  /planets/{planetId}/metadata/buildings:
+    $ref: './paths/planets-by-id-metadata-buildings.yaml'
+
+  /planets/{planetId}/metadata/core:
+    $ref: './paths/planets-by-id-metadata-core.yaml'
+
+  /planets/{planetId}/metadata/inventions:
+    $ref: './paths/planets-by-id-metadata-inventions.yaml'
 
   /planets/{planetId}/online:
     $ref: './paths/planets-by-id-online.yaml'
@@ -86,17 +95,37 @@ components:
       $ref: './schemas/Error.yaml'
     Galaxy:
       $ref: './schemas/Galaxy.yaml'
+    IndustryCategory:
+      $ref: './schemas/IndustryCategory.yaml'
+    IndustryType:
+      $ref: './schemas/IndustryType.yaml'
     Invention:
       $ref: './schemas/Invention.yaml'
+    Level:
+      $ref: './schemas/Level.yaml'
     Mail:
       $ref: './schemas/Mail.yaml'
+    MetadataBuildings:
+      $ref: './schemas/MetadataBuildings.yaml'
+    MetadataCore:
+      $ref: './schemas/MetadataCore.yaml'
+    MetadataInventions:
+      $ref: './schemas/MetadataInventions.yaml'
     Planet:
       $ref: './schemas/Planet.yaml'
     PlanetEvents:
       $ref: './schemas/PlanetEvents.yaml'
+    ResourceType:
+      $ref: './schemas/ResourceType.yaml'
+    ResourceUnit:
+      $ref: './schemas/ResourceUnit.yaml'
+    Seal:
+      $ref: './schemas/Seal.yaml'
     Session:
       $ref: './schemas/Session.yaml'
     Town:
       $ref: './schemas/Town.yaml'
+    Translation:
+      $ref: './schemas/Translation.yaml'
     Tycoon:
       $ref: './schemas/Tycoon.yaml'

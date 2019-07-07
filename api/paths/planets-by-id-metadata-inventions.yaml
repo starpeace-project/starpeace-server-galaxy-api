@@ -1,0 +1,37 @@
+get:
+  summary: Retrieve current Planet inventions metadata
+  operationId: get-planet-metadata-inventions
+  tags:
+    - planet
+    - metadata
+    - inventions
+
+  parameters:
+    - name: planetId
+      in: path
+      required: true
+      description: ID of Planet
+      schema:
+        type: string
+    - name: lastUpdate
+      in: query
+      description: Lower-bound timestamp for planet events
+      required: true
+      schema:
+        type: string
+        format: date-time
+
+  responses:
+    '200':
+      description: Planet inventions metadata
+      content:
+        application/json:
+          schema:
+            $ref: "../openapi.yaml#/components/schemas/MetadataInventions"
+
+    default:
+      description: unexpected error
+      content:
+        application/json:
+          schema:
+            $ref: "../openapi.yaml#/components/schemas/Error"

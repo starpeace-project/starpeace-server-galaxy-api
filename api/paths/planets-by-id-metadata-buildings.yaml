@@ -1,0 +1,30 @@
+get:
+  summary: Retrieve current Planet building definition and simulation metadata
+  operationId: get-planet-metadata-buildings
+  tags:
+    - planet
+    - metadata
+    - buildings
+
+  parameters:
+    - name: planetId
+      in: path
+      required: true
+      description: ID of Planet
+      schema:
+        type: string
+
+  responses:
+    '200':
+      description: Planet building definitions and simulation metadata
+      content:
+        application/json:
+          schema:
+            $ref: "../openapi.yaml#/components/schemas/MetadataBuildings"
+
+    default:
+      description: unexpected error
+      content:
+        application/json:
+          schema:
+            $ref: "../openapi.yaml#/components/schemas/Error"

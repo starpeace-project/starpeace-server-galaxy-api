@@ -1,0 +1,20 @@
+type: object
+required:
+  - id
+  - labelPlural
+  - unitId
+  - price
+
+properties:
+  id:
+    type: string
+
+  labelPlural:
+    $ref: "../openapi.yaml#/components/schemas/Translation"
+
+  unitId:
+    type: string
+
+  price:
+    type: number
+    format: float

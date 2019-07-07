@@ -1,0 +1,11 @@
+type: object
+required:
+  - id
+  - label
+
+properties:
+  id:
+    type: string
+
+  label:
+    $ref: "../openapi.yaml#/components/schemas/Translation"

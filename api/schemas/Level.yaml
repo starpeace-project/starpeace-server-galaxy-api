@@ -2,15 +2,15 @@ type: object
 required:
   - id
   - name
-  - progress
+  - level
 
 properties:
   id:
     type: string
 
-  name:
-    type: string
+  label:
+    $ref: "../openapi.yaml#/components/schemas/Translation"
 
-  progress:
+  level:
     type: integer
     format: int32

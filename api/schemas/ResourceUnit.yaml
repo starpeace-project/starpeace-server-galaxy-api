@@ -1,0 +1,11 @@
+type: object
+required:
+  - id
+  - labelPlural
+
+properties:
+  id:
+    type: string
+
+  labelPlural:
+    $ref: "../openapi.yaml#/components/schemas/Translation"

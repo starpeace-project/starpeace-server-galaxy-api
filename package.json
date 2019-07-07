@@ -1,6 +1,6 @@
 {
   "name": "@starpeace/starpeace-server-multiverse-api",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "API interface schema for STARPEACE Multiverse game-play and simulation server",
   "author": "starpeace-project",
   "license": "MIT",

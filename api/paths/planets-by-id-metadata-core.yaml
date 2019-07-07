@@ -1,0 +1,30 @@
+get:
+  summary: Retrieve current Planet core metadata
+  operationId: get-planet-metadata-core
+  tags:
+    - planet
+    - metadata
+    - core
+
+  parameters:
+    - name: planetId
+      in: path
+      required: true
+      description: ID of Planet
+      schema:
+        type: string
+
+  responses:
+    '200':
+      description: Planet core metadata
+      content:
+        application/json:
+          schema:
+            $ref: "../openapi.yaml#/components/schemas/MetadataCore"
+
+    default:
+      description: unexpected error
+      content:
+        application/json:
+          schema:
+            $ref: "../openapi.yaml#/components/schemas/Error"

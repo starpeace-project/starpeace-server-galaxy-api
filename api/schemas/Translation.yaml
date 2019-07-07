@@ -1,0 +1,22 @@
+type: object
+required:
+  - DE
+  - EN
+  - ES
+  - FR
+  - IT
+  - PT
+
+properties:
+  DE:
+    type: string
+  EN:
+    type: string
+  ES:
+    type: string
+  FR:
+    type: string
+  IT:
+    type: string
+  PT:
+    type: string

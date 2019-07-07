@@ -4,5 +4,6 @@ required:
 properties:
   sessionToken:
     type: string
+
   tycoonId:
     type: string
