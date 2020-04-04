@@ -1,0 +1,41 @@
+type: object
+required:
+  - id
+  - name
+  - enabled
+  - planetType
+  - planetWidth
+  - planetHeight
+  - mapId
+
+properties:
+  id:
+    type: string
+  name:
+    type: string
+  enabled:
+    type: boolean
+
+  planetType:
+    type: string
+  planetWidth:
+    type: integer
+    format: int32
+  planetHeight:
+    type: integer
+    format: int32
+  mapId:
+    type: string
+
+  population:
+    type: integer
+    format: int64
+  investmentValue:
+    type: integer
+    format: int64
+  corporationCount:
+    type: integer
+    format: int32
+  onlineCount:
+    type: integer
+    format: int32

@@ -18,7 +18,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: "../openapi.yaml#/components/schemas/Corporation"
+            $ref: "../openapi.yaml#/components/schemas/corporation.Corporation"
 
     default:
       description: unexpected error

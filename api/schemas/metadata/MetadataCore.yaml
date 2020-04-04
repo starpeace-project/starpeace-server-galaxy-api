@@ -1,0 +1,49 @@
+type: object
+required:
+  - planetId
+  - cityZones
+  - industryCategories
+  - industryTypes
+  - levels
+  - resourceTypes
+  - resourceUnits
+  - seals
+
+properties:
+  planetId:
+    type: string
+
+  cityZones:
+    type: array
+    items:
+      $ref: "../../openapi.yaml#/components/schemas/core.CityZone"
+
+  industryCategories:
+    type: array
+    items:
+      $ref: "../../openapi.yaml#/components/schemas/core.IndustryCategory"
+
+  industryTypes:
+    type: array
+    items:
+      $ref: "../../openapi.yaml#/components/schemas/core.IndustryType"
+
+  levels:
+    type: array
+    items:
+      $ref: "../../openapi.yaml#/components/schemas/core.Level"
+
+  resourceTypes:
+    type: array
+    items:
+      $ref: "../../openapi.yaml#/components/schemas/core.ResourceType"
+
+  resourceUnits:
+    type: array
+    items:
+      $ref: "../../openapi.yaml#/components/schemas/core.ResourceUnit"
+
+  seals:
+    type: array
+    items:
+      $ref: "../../openapi.yaml#/components/schemas/core.Seal"

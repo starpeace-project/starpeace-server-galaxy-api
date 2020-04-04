@@ -1,0 +1,19 @@
+type: object
+required:
+  - companyId
+  - pendingInventions
+  - completedIds
+
+properties:
+  companyId:
+    type: string
+
+  pendingInventions:
+    type: array
+    items:
+      $ref: "../../openapi.yaml#/components/schemas/invention.Invention"
+
+  completedIds:
+    type: array
+    items:
+      type: string

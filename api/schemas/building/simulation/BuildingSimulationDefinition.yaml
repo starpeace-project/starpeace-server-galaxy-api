@@ -1,0 +1,69 @@
+type: object
+discriminator:
+  propertyName: type
+  mapping:
+    BANK: '../../../openapi.yaml#/components/schemas/building.simulation.bank.BankDefinition'
+    CAPITOL: '../../../openapi.yaml#/components/schemas/building.simulation.civic.CapitolDefinition'
+    MAUSOLEUM: '../../../openapi.yaml#/components/schemas/building.simulation.civic.MausoleumDefinition'
+    PORTAL: '../../../openapi.yaml#/components/schemas/building.simulation.civic.PortalDefinition'
+    TOWNHALL: '../../../openapi.yaml#/components/schemas/building.simulation.civic.TownhallDefinition'
+    TRADECENTER: '../../../openapi.yaml#/components/schemas/building.simulation.civic.TradecenterDefinition'
+    FACTORY: '../../../openapi.yaml#/components/schemas/building.simulation.factory.FactoryDefinition'
+    HEADQUARTERS: '../../../openapi.yaml#/components/schemas/building.simulation.headquarters.HeadquartersDefinition'
+    ANTENNA: '../../../openapi.yaml#/components/schemas/building.simulation.media.AntennaDefinition'
+    MEDIA_STATION: '../../../openapi.yaml#/components/schemas/building.simulation.media.MediaStationDefinition'
+    OFFICE: '../../../openapi.yaml#/components/schemas/building.simulation.office.OfficeDefinition'
+    PARK: '../../../openapi.yaml#/components/schemas/building.simulation.park.ParkDefinition'
+    RESIDENCE: '../../../openapi.yaml#/components/schemas/building.simulation.residence.ResidenceDefinition'
+    SERVICE: '../../../openapi.yaml#/components/schemas/building.simulation.service.ServiceDefinition'
+    STORAGE: '../../../openapi.yaml#/components/schemas/building.simulation.storage.StorageDefinition'
+    STORE: '../../../openapi.yaml#/components/schemas/building.simulation.store.StoreDefinition'
+
+required:
+  - id
+  - type
+  - maxLevel
+  - constructionInputs
+  - prestige
+  - maintainance
+  - beauty
+  - pollution
+
+properties:
+  id:
+    description: ID of building simulation definition
+    type: string
+
+  type:
+    description: type identifier of building simulation, mapping to child subclass simulation definitions
+    type: string
+
+  maxLevel:
+    description: maximum upgrade level of building
+    type: string
+
+  constructionInputs:
+    description: array of input quantities required for construction
+    type: array
+    items:
+      $ref: "../../../openapi.yaml#/components/schemas/building.simulation.ConstructionQuantity"
+
+  prestige:
+    description: prestige earned or lost per level of this building simulation
+    type: integer
+    format: int32
+
+  maintainance:
+    description: maintainance required per level of this building simulation per hour
+    type: integer
+    format: int32
+
+  beauty:
+    description: beauty earned or lost per level of this building simulation per hour
+    type: integer
+    format: int32
+
+  pollution:
+    description: pollution earned or lost per level of this building simulation per hour
+    type: integer
+    format: int32

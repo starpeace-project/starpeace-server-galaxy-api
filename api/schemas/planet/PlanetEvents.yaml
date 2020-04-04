@@ -1,0 +1,21 @@
+type: object
+required:
+  - planetId
+
+properties:
+  planetId:
+    type: string
+  date:
+    type: string
+    format: date-time
+  season:
+    type: string
+
+  buildingEvents:
+    type: array
+    items:
+      $ref: "../../openapi.yaml#/components/schemas/planet.event.BuildingEvent"
+  tycoonEvents:
+    type: array
+    items:
+      $ref: "../../openapi.yaml#/components/schemas/planet.event.TycoonEvent"

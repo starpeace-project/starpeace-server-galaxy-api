@@ -1,0 +1,57 @@
+type: object
+required:
+  - id
+  - imageId
+  - constructionImageId
+  - name
+  - industryCategoryId
+  - industryTypeId
+  - sealId
+  - cityZoneId
+
+properties:
+  id:
+    description: ID of building definition
+    type: string
+
+  imageId:
+    description: default building image definition ID of building
+    type: string
+
+  constructionImageId:
+    description: building image definition ID to use during construction of building
+    type: string
+
+  name:
+    description: translation object with name of building
+    $ref: "../../openapi.yaml#/components/schemas/Translation"
+
+  industryCategoryId:
+    description: ID for the industry category of building
+    type: string
+
+  industryTypeId:
+    description: ID for the industry type of building
+    type: string
+
+  sealId:
+    description: ID for seal of building
+    type: string
+
+  cityZoneId:
+    description: city zone ID building can be constructed
+    type: string
+
+  restricted:
+    description: flag indicating whether building is restricted from tycoon construction
+    type: boolean
+
+  concreteFoundation:
+    description: flag indicating whether building should have concrete foundation
+    type: boolean
+
+  requiredInventionIds:
+    description: array of invention definition IDs that must be researched before construction of building
+    type: array
+    items:
+      type: string

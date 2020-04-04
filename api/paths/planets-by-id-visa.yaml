@@ -1,0 +1,29 @@
+post:
+  summary: Register a new game session for identity and authentication token
+  operationId: new-session
+  tags:
+    - planet
+
+  parameters:
+    - name: identityType
+      in: query
+      description: Identity type for session
+      required: true
+      schema:
+        type: string
+        enum: [visitor, tycoon]
+
+  responses:
+    '201':
+      description: Visa registered for game session
+      content:
+        application/json:
+          schema:
+            $ref: "../openapi.yaml#/components/schemas/Visa"
+
+    default:
+      description: unexpected error
+      content:
+        application/json:
+          schema:
+            $ref: "../openapi.yaml#/components/schemas/Error"

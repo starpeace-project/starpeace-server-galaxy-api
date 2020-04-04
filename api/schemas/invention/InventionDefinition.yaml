@@ -1,0 +1,40 @@
+type: object
+required:
+  - id
+  - categoryId
+  - industryTypeId
+  - name
+  - description
+  - dependsOn
+  - properties
+
+properties:
+  id:
+    description: ID of invention
+    type: string
+
+  categoryId:
+    description: ID of invention category
+    type: string
+
+  industryTypeId:
+    description: ID of invention type
+    type: string
+
+  name:
+    description: translation object with name of invention
+    $ref: "../../openapi.yaml#/components/schemas/Translation"
+
+  description:
+    description: translation object with description of invention
+    $ref: "../../openapi.yaml#/components/schemas/Translation"
+
+  dependsOn:
+    description: array of other invention definition IDs this invention depends on
+    type: array
+    items:
+      type: string
+
+  properties:
+    description: properties of invention
+    type: object

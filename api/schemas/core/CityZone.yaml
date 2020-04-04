@@ -1,0 +1,19 @@
+type: object
+required:
+  - id
+  - value
+  - color
+
+properties:
+  id:
+    description: unique identifier of zone
+    type: string
+
+  value:
+    description: unique numeric value of zone
+    type: integer
+    format: int32
+
+  color:
+    description: hexidecimal number value of zone color
+    type: string

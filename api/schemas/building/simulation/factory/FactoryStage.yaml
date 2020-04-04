@@ -1,0 +1,43 @@
+type: object
+required:
+  - index
+  - duration
+  - labor
+  - operations
+  - inputs
+  - outputs
+
+properties:
+  index:
+    description: number index of stage, starting at one and ascending
+    type: integer
+    format: int32
+
+  duration:
+    description: length of stage duration in calendar hours
+    type: integer
+    format: int32
+
+  labor:
+    description: labor requirements for building stage_inputs
+    type: array
+    items:
+      $ref: "../../../../openapi.yaml#/components/schemas/building.simulation.ResourceQuantity"
+
+  operations:
+    description: array of resource quantities required for building operations
+    type: array
+    items:
+      $ref: "../../../../openapi.yaml#/components/schemas/building.simulation.ResourceQuantity"
+
+  inputs:
+    description: array of input resource quantities
+    type: array
+    items:
+      $ref: "../../../../openapi.yaml#/components/schemas/building.simulation.ResourceQuantity"
+
+  outputs:
+    description: array of output resource quantities
+    type: array
+    items:
+      $ref: "../../../../openapi.yaml#/components/schemas/building.simulation.ResourceQuantity"

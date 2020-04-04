@@ -1,0 +1,19 @@
+type: object
+required:
+  - id
+  - name
+  - level
+
+properties:
+  id:
+    description: ID of level
+    type: string
+
+  label:
+    description: translation with label of level
+    $ref: "../../openapi.yaml#/components/schemas/Translation"
+
+  level:
+    description: unique number of this level starting at one and incrementing
+    type: integer
+    format: int32

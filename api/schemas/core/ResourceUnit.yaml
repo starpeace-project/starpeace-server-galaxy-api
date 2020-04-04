@@ -1,0 +1,13 @@
+type: object
+required:
+  - id
+  - labelPlural
+
+properties:
+  id:
+    description: ID of resource unit
+    type: string
+
+  labelPlural:
+    description: translation object with plural label of unit
+    $ref: "../../openapi.yaml#/components/schemas/Translation"

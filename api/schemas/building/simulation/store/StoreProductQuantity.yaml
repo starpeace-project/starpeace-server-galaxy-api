@@ -1,0 +1,21 @@
+type: object
+required:
+  - resourceId
+  - maxVelocity
+  - customers
+
+properties:
+  resourceId:
+    description: ID of resource type required
+    type: string
+
+  maxVelocity:
+    description: maximum amount of resource that can be sold per hour
+    type: integer
+    format: int32
+
+  customers:
+    description: array of store customer metadata
+    type: array
+    items:
+      $ref: "../../../../openapi.yaml#/components/schemas/building.simulation.store.StoreProductCustomer"

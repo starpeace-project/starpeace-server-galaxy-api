@@ -1,0 +1,19 @@
+type: object
+required:
+  - id
+  - parentId
+  - order
+
+properties:
+  id:
+    description: ID of bookmark
+    type: string
+
+  parentId:
+    description: updated parentId of bookmark
+    type: string
+
+  order:
+    description: updated order of bookmark
+    type: integer
+    format: int32

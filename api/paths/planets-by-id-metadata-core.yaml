@@ -20,7 +20,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: "../openapi.yaml#/components/schemas/MetadataCore"
+            $ref: "../openapi.yaml#/components/schemas/metadata.MetadataCore"
 
     default:
       description: unexpected error

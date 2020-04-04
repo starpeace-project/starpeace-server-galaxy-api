@@ -1,0 +1,20 @@
+post:
+  summary: Log into Tycoon creating new authenticated session
+  operationId: login-galaxy
+  tags:
+    - galaxy
+
+  responses:
+    '200':
+      description: Galaxy information
+      content:
+        application/json:
+          schema:
+            $ref: '../openapi.yaml#/components/schemas/Galaxy'
+
+    default:
+      description: unexpected error
+      content:
+        application/json:
+          schema:
+            $ref: '../openapi.yaml#/components/schemas/Error'

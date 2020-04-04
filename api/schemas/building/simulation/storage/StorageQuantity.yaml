@@ -1,0 +1,14 @@
+type: object
+required:
+  - resourceId
+  - max
+
+properties:
+  resourceId:
+    description: ID of resource type required
+    type: string
+
+  max:
+    description: maximum amount of resource that can be stored
+    type: integer
+    format: int32

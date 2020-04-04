@@ -1,0 +1,17 @@
+post:
+  summary: Log out of current session
+  operationId: logout-galaxy
+  tags:
+    - galaxy
+
+  responses:
+    '200':
+      content:
+        application/json:
+
+    default:
+      description: unexpected error
+      content:
+        application/json:
+          schema:
+            $ref: '../openapi.yaml#/components/schemas/Error'

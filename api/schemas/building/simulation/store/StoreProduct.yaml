@@ -1,0 +1,17 @@
+type: object
+required:
+  - inputs
+  - outputs
+
+properties:
+  inputs:
+    description: array of input resource quantities
+    type: array
+    items:
+      $ref: "../../../../openapi.yaml#/components/schemas/building.simulation.ResourceQuantity"
+
+  outputs:
+    description: array of output resource quantities
+    type: array
+    items:
+      $ref: "../../../../openapi.yaml#/components/schemas/building.simulation.store.StoreProductQuantity"

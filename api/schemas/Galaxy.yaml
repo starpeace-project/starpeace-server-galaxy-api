@@ -4,6 +4,7 @@ required:
   - name
   - visitorEnabled
   - tycoonEnabled
+  - tycoonCreationEnabled
   - tycoonAuthentication
 
 properties:
@@ -13,6 +14,8 @@ properties:
     type: string
 
   visitorEnabled:
+    type: boolean
+  tycoonCreationEnabled:
     type: boolean
   tycoonEnabled:
     type: boolean
@@ -24,4 +27,4 @@ properties:
   planets:
     type: array
     items:
-      $ref: "../openapi.yaml#/components/schemas/Planet"
+      $ref: "../openapi.yaml#/components/schemas/planet.Planet"

@@ -21,7 +21,7 @@ get:
           schema:
             type: array
             items:
-              $ref: "../openapi.yaml#/components/schemas/Mail"
+              $ref: "../openapi.yaml#/components/schemas/corporation.Mail"
 
     default:
       description: unexpected error

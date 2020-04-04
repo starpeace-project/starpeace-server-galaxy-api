@@ -28,7 +28,7 @@ get:
           schema:
             type: array
             items:
-              $ref: "../openapi.yaml#/components/schemas/Town"
+              $ref: "../openapi.yaml#/components/schemas/planet.Town"
 
     default:
       description: unexpected error

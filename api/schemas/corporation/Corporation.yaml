@@ -1,0 +1,25 @@
+type: object
+required:
+  - id
+  - name
+  - tycoonId
+  - planetId
+  - buildingCount
+
+properties:
+  id:
+    type: string
+  name:
+    type: string
+  tycoonId:
+    type: string
+  planetId:
+    type: string
+  buildingCount:
+    type: integer
+    format: int32
+
+  companies:
+    type: array
+    items:
+      $ref: "../../openapi.yaml#/components/schemas/corporation.Company"

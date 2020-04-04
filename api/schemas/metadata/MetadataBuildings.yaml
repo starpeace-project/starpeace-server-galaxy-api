@@ -1,0 +1,19 @@
+type: object
+required:
+  - planetId
+  - definitions
+  - simulationDefinitions
+
+properties:
+  planetId:
+    type: string
+
+  definitions:
+    type: array
+    items:
+      $ref: "../../openapi.yaml#/components/schemas/building.BuildingDefinition"
+
+  simulationDefinitions:
+    type: array
+    items:
+      $ref: "../../openapi.yaml#/components/schemas/building.simulation.BuildingSimulationDefinition"

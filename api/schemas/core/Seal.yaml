@@ -1,0 +1,25 @@
+type: object
+required:
+  - id
+  - nameShort
+  - nameLong
+  - buildingDefinitionIds
+
+properties:
+  id:
+    description: ID of resource unit
+    type: string
+
+  nameShort:
+    description: short name of seal
+    type: string
+
+  nameLong:
+    description: long or full name of seal
+    type: string
+
+  buildingDefinitionIds:
+    description: array of building definition IDs constructable by seal
+    type: array
+    items:
+      type: string

@@ -1,0 +1,13 @@
+type: object
+required:
+  - id
+  - label
+
+properties:
+  id:
+    description: ID of industry type
+    type: string
+
+  label:
+    description: translation object with label of industry type
+    $ref: "../../openapi.yaml#/components/schemas/Translation"

@@ -26,7 +26,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: "../openapi.yaml#/components/schemas/PlanetEvents"
+            $ref: "../openapi.yaml#/components/schemas/planet.PlanetEvents"
 
     default:
       description: unexpected error

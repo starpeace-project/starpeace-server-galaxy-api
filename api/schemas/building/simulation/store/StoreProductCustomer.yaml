@@ -1,0 +1,20 @@
+type: object
+required:
+  - resourceId
+  - maxVelocity
+  - probability
+
+properties:
+  resourceId:
+    description: ID of resource type of customer
+    type: string
+
+  maxVelocity:
+    description: maximum amount of resource that can be bought by customers per hour
+    type: integer
+    format: int32
+
+  probability:
+    description: base probability customers will purchase products per hour
+    type: number
+    format: float

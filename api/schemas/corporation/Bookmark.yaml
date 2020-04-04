@@ -1,0 +1,42 @@
+type: object
+required:
+  - id
+  - parent_id
+  - type
+  - name
+  - order
+
+properties:
+  id:
+    description: ID of bookmark
+    type: string
+
+  parent_id:
+    description: ID of parent folder
+    type: string
+
+  type:
+    description: type of bookmark, one of FOLDER, LOCATION or BUILDING
+    type: string
+
+  name:
+    description: name of bookmark
+    type: string
+
+  order:
+    description: order of bookmark relative others ascending
+    type: integer
+    format: int32
+
+  buildingId:
+    description: ID of bookmarked building, if type == BUILDING
+    type: string
+
+  mapX:
+    description: map X location of bookmark, if type == LOCATION or type == BUILDING
+    type: integer
+    format: int32
+  mapY:
+    description: map Y location of bookmark, if type == LOCATION or type == BUILDING
+    type: integer
+    format: int32

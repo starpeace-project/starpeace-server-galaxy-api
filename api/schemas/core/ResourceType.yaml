@@ -1,0 +1,24 @@
+type: object
+required:
+  - id
+  - labelPlural
+  - unitId
+  - price
+
+properties:
+  id:
+    description: ID of resource
+    type: string
+
+  labelPlural:
+    description: translation with plural label of resource
+    $ref: "../../openapi.yaml#/components/schemas/Translation"
+
+  unitId:
+    description: ID of resource unit for this resource
+    type: string
+
+  price:
+    description: base price of this resource in dollars
+    type: number
+    format: float

@@ -1,0 +1,13 @@
+type: object
+required:
+  - id
+  - name
+  - sealId
+
+properties:
+  id:
+    type: string
+  name:
+    type: string
+  sealId:
+    type: string

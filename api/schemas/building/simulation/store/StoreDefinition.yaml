@@ -1,0 +1,26 @@
+allOf:
+  - $ref: '../../../../openapi.yaml#/components/schemas/building.simulation.BuildingSimulationDefinition'
+  - type: object
+    required:
+      - labor
+      - operations
+      - products
+
+    properties:
+      labor:
+        description: labor requirements for building
+        type: array
+        items:
+          $ref: "../../../../openapi.yaml#/components/schemas/building.simulation.ResourceQuantity"
+
+      operations:
+        description: array of resource quantities required for building operations
+        type: array
+        items:
+          $ref: "../../../../openapi.yaml#/components/schemas/building.simulation.ResourceQuantity"
+
+      products:
+        description: array of output resource products sold by building
+        type: array
+        items:
+          $ref: "../../../../openapi.yaml#/components/schemas/building.simulation.store.StoreProduct"

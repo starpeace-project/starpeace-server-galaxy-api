@@ -1,0 +1,20 @@
+type: object
+required:
+  - resourceId
+  - quantity
+  - maxVelocity
+
+properties:
+  resourceId:
+    description: ID of resource type required
+    type: string
+
+  quantity:
+    description: total amount of resource required
+    type: integer
+    format: int32
+
+  maxVelocity:
+    description: maximum amount of resource that can be used for construction per hour
+    type: integer
+    format: int32

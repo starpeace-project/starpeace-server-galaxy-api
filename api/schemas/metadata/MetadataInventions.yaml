@@ -1,0 +1,13 @@
+type: object
+required:
+  - planetId
+  - inventions
+
+properties:
+  planetId:
+    type: string
+
+  inventions:
+    type: array
+    items:
+      $ref: "../../openapi.yaml#/components/schemas/invention.InventionDefinition"

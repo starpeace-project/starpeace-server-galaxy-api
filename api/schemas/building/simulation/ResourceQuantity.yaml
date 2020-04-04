@@ -1,0 +1,26 @@
+type: object
+required:
+  - resourceId
+  - maxVelocity
+  - weightEfficiency
+  - weightQuality
+
+properties:
+  resourceId:
+    description: ID of resource type required
+    type: string
+
+  maxVelocity:
+    description: maximum quantity of resource per hour
+    type: integer
+    format: int32
+
+  weightEfficiency:
+    description: importance weight of efficiency on this quantity
+    type: integer
+    format: int32
+
+  weightQuality:
+    description: importance weight of quality on this quantity
+    type: integer
+    format: int32

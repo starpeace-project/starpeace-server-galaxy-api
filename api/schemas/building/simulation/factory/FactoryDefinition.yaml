@@ -1,0 +1,12 @@
+allOf:
+  - $ref: '../../../../openapi.yaml#/components/schemas/building.simulation.BuildingSimulationDefinition'
+  - type: object
+    required:
+      - stages
+
+    properties:
+      stages:
+        description: array of factory stage definitions
+        type: array
+        items:
+          $ref: "../../../../openapi.yaml#/components/schemas/building.simulation.factory.FactoryStage"

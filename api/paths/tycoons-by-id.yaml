@@ -18,7 +18,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: "../openapi.yaml#/components/schemas/Tycoon"
+            $ref: "../openapi.yaml#/components/schemas/corporation.Tycoon"
 
     default:
       description: unexpected error

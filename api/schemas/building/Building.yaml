@@ -1,0 +1,43 @@
+type: object
+required:
+  - id
+  - tycoonId
+  - corporationId
+  - companyId
+  - definitionId
+  - name
+  - mapX
+  - mapY
+
+properties:
+  id:
+    type: string
+
+  tycoonId:
+    description: tycoon ID of owner building, or IFEL for core buildings
+    type: string
+
+  corporationId:
+    description: corporation ID of owner building, or IFEL for core buildings
+    type: string
+
+  companyId:
+    description: company ID of owner building, or IFEL for core buildings
+    type: string
+
+  definitionId:
+    description: building definition ID of building
+    type: string
+
+  name:
+    description: name of building
+    type: string
+
+  mapX:
+    description: map X location of building
+    type: integer
+    format: int32
+  mapY:
+    description: map Y location of building
+    type: integer
+    format: int32

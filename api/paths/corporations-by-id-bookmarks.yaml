@@ -21,7 +21,7 @@ get:
           schema:
             type: array
             items:
-              $ref: "../openapi.yaml#/components/schemas/Bookmark"
+              $ref: "../openapi.yaml#/components/schemas/corporation.Bookmark"
 
     default:
       description: unexpected error
@@ -90,7 +90,7 @@ post:
       content:
         application/json:
           schema:
-            $ref: "../openapi.yaml#/components/schemas/Bookmark"
+            $ref: "../openapi.yaml#/components/schemas/corporation.Bookmark"
 
     default:
       description: unexpected error
@@ -121,7 +121,7 @@ patch:
       schema:
         type: array
         items:
-          $ref: "../openapi.yaml#/components/schemas/BookmarkDelta"
+          $ref: "../openapi.yaml#/components/schemas/corporation.BookmarkDelta"
 
   responses:
     '200':
@@ -131,7 +131,7 @@ patch:
           schema:
             type: array
             items:
-                $ref: "../openapi.yaml#/components/schemas/Bookmark"
+                $ref: "../openapi.yaml#/components/schemas/corporation.Bookmark"
 
     default:
       description: unexpected error

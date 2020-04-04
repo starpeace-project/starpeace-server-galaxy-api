@@ -1,6 +1,6 @@
 openapi: "3.0.0"
 info:
-  version: 0.1.6
+  version: 0.1.7
   title: STARPEACE Multiverse
   description: >-
     STARPEACE Multiverse API (SPMAPI) provides support for players to retrieve
@@ -18,34 +18,31 @@ servers:
 
 
 paths:
-  /galaxy:
-    $ref: './paths/galaxy.yaml'
-
-  /galaxy/session:
-    $ref: './paths/galaxy-session.yaml'
-
+  /galaxy/metadata:
+    $ref: './paths/galaxy-metadata.yaml'
+  /galaxy/login:
+    $ref: './paths/galaxy-login.yaml'
+  /galaxy/logout:
+    $ref: './paths/galaxy-logout.yaml'
+  /galaxy/visa:
+    $ref: './paths/galaxy-visa.yaml'
 
   /planets/{planetId}/buildings:
     $ref: './paths/planets-by-id-buildings.yaml'
-
   /planets/{planetId}/buildings/{buildingId}:
     $ref: './paths/planets-by-id-buildings-by-id.yaml'
 
-  /planets/{planetId}/events:
-    $ref: './paths/planets-by-id-events.yaml'
-
   /planets/{planetId}/metadata/buildings:
     $ref: './paths/planets-by-id-metadata-buildings.yaml'
-
   /planets/{planetId}/metadata/core:
     $ref: './paths/planets-by-id-metadata-core.yaml'
-
   /planets/{planetId}/metadata/inventions:
     $ref: './paths/planets-by-id-metadata-inventions.yaml'
 
+  /planets/{planetId}/events:
+    $ref: './paths/planets-by-id-events.yaml'
   /planets/{planetId}/online:
     $ref: './paths/planets-by-id-online.yaml'
-
   /planets/{planetId}/towns:
     $ref: './paths/planets-by-id-towns.yaml'
 
@@ -56,76 +53,140 @@ paths:
 
   /corporations/{corporationId}:
     $ref: './paths/corporations-by-id.yaml'
-
   /corporations/{corporationId}/bookmarks:
     $ref: './paths/corporations-by-id-bookmarks.yaml'
-
   /corporations/{corporationId}/cashflow:
     $ref: './paths/corporations-by-id-cashflow.yaml'
-
   /corporations/{corporationId}/mail:
     $ref: './paths/corporations-by-id-mail.yaml'
 
 
   /companies/{companyId}/buildings:
     $ref: './paths/companies-by-id-buildings.yaml'
-
   /companies/{companyId}/inventions:
     $ref: './paths/companies-by-id-inventions.yaml'
-
   /companies/{companyId}/inventions/{inventionId}:
     $ref: './paths/companies-by-id-inventions-by-id.yaml'
 
 
 components:
   schemas:
-    Bookmark:
-      $ref: './schemas/Bookmark.yaml'
-    BookmarkDelta:
-      $ref: './schemas/BookmarkDelta.yaml'
-    Building:
-      $ref: './schemas/Building.yaml'
-    Company:
-      $ref: './schemas/Company.yaml'
-    Corporation:
-      $ref: './schemas/Corporation.yaml'
-    CorporationCashflow:
-      $ref: './schemas/CorporationCashflow.yaml'
+
+    building.Building:
+        $ref: './schemas/building/Building.yaml'
+    building.BuildingDefinition:
+        $ref: './schemas/building/BuildingDefinition.yaml'
+
+    building.simulation.BuildingSimulationDefinition:
+        $ref: './schemas/building/simulation/BuildingSimulationDefinition.yaml'
+    building.simulation.ConstructionQuantity:
+        $ref: './schemas/building/simulation/ConstructionQuantity.yaml'
+    building.simulation.ResourceQuantity:
+        $ref: './schemas/building/simulation/ResourceQuantity.yaml'
+
+    building.simulation.bank.BankDefinition:
+        $ref: './schemas/building/simulation/bank/BankDefinition.yaml'
+    building.simulation.civic.CapitolDefinition:
+        $ref: './schemas/building/simulation/civic/CapitolDefinition.yaml'
+    building.simulation.civic.MausoleumDefinition:
+        $ref: './schemas/building/simulation/civic/MausoleumDefinition.yaml'
+    building.simulation.civic.PortalDefinition:
+        $ref: './schemas/building/simulation/civic/PortalDefinition.yaml'
+    building.simulation.civic.TownhallDefinition:
+        $ref: './schemas/building/simulation/civic/TownhallDefinition.yaml'
+    building.simulation.civic.TradecenterDefinition:
+        $ref: './schemas/building/simulation/civic/TradecenterDefinition.yaml'
+    building.simulation.factory.FactoryDefinition:
+        $ref: './schemas/building/simulation/factory/FactoryDefinition.yaml'
+    building.simulation.factory.FactoryStage:
+        $ref: './schemas/building/simulation/factory/FactoryStage.yaml'
+    building.simulation.headquarters.HeadquartersDefinition:
+        $ref: './schemas/building/simulation/headquarters/HeadquartersDefinition.yaml'
+    building.simulation.media.AntennaDefinition:
+        $ref: './schemas/building/simulation/media/AntennaDefinition.yaml'
+    building.simulation.media.MediaStationDefinition:
+        $ref: './schemas/building/simulation/media/MediaStationDefinition.yaml'
+    building.simulation.office.OfficeDefinition:
+        $ref: './schemas/building/simulation/office/OfficeDefinition.yaml'
+    building.simulation.park.ParkDefinition:
+        $ref: './schemas/building/simulation/park/ParkDefinition.yaml'
+    building.simulation.residence.ResidenceDefinition:
+        $ref: './schemas/building/simulation/residence/ResidenceDefinition.yaml'
+    building.simulation.service.ServiceDefinition:
+        $ref: './schemas/building/simulation/service/ServiceDefinition.yaml'
+    building.simulation.storage.StorageDefinition:
+        $ref: './schemas/building/simulation/storage/StorageDefinition.yaml'
+    building.simulation.storage.StorageQuantity:
+        $ref: './schemas/building/simulation/storage/StorageQuantity.yaml'
+    building.simulation.store.StoreDefinition:
+        $ref: './schemas/building/simulation/store/StoreDefinition.yaml'
+    building.simulation.store.StoreProduct:
+        $ref: './schemas/building/simulation/store/StoreProduct.yaml'
+    building.simulation.store.StoreProductCustomer:
+        $ref: './schemas/building/simulation/store/StoreProductCustomer.yaml'
+    building.simulation.store.StoreProductQuantity:
+        $ref: './schemas/building/simulation/store/StoreProductQuantity.yaml'
+
+    corporation.Bookmark:
+      $ref: './schemas/corporation/Bookmark.yaml'
+    corporation.BookmarkDelta:
+      $ref: './schemas/corporation/BookmarkDelta.yaml'
+    corporation.Company:
+      $ref: './schemas/corporation/Company.yaml'
+    corporation.Corporation:
+      $ref: './schemas/corporation/Corporation.yaml'
+    corporation.CorporationCashflow:
+      $ref: './schemas/corporation/CorporationCashflow.yaml'
+    corporation.Mail:
+      $ref: './schemas/corporation/Mail.yaml'
+    corporation.Tycoon:
+      $ref: './schemas/corporation/Tycoon.yaml'
+
+    core.CityZone:
+      $ref: './schemas/core/CityZone.yaml'
+    core.IndustryCategory:
+      $ref: './schemas/core/IndustryCategory.yaml'
+    core.IndustryType:
+      $ref: './schemas/core/IndustryType.yaml'
+    core.Level:
+      $ref: './schemas/core/Level.yaml'
+    core.ResourceType:
+      $ref: './schemas/core/ResourceType.yaml'
+    core.ResourceUnit:
+      $ref: './schemas/core/ResourceUnit.yaml'
+    core.Seal:
+      $ref: './schemas/core/Seal.yaml'
+
+    invention.CompanyInventions:
+      $ref: './schemas/invention/CompanyInventions.yaml'
+    invention.Invention:
+      $ref: './schemas/invention/Invention.yaml'
+    invention.InventionDefinition:
+      $ref: './schemas/invention/InventionDefinition.yaml'
+
+    metadata.MetadataBuildings:
+      $ref: './schemas/metadata/MetadataBuildings.yaml'
+    metadata.MetadataCore:
+      $ref: './schemas/metadata/MetadataCore.yaml'
+    metadata.MetadataInventions:
+      $ref: './schemas/metadata/MetadataInventions.yaml'
+
+    planet.Planet:
+      $ref: './schemas/planet/Planet.yaml'
+    planet.PlanetEvents:
+      $ref: './schemas/planet/PlanetEvents.yaml'
+    planet.event.BuildingEvent:
+      $ref: './schemas/planet/event/BuildingEvent.yaml'
+    planet.event.TycoonEvent:
+      $ref: './schemas/planet/event/TycoonEvent.yaml'
+    planet.Town:
+      $ref: './schemas/planet/Town.yaml'
+
     Error:
       $ref: './schemas/Error.yaml'
     Galaxy:
       $ref: './schemas/Galaxy.yaml'
-    IndustryCategory:
-      $ref: './schemas/IndustryCategory.yaml'
-    IndustryType:
-      $ref: './schemas/IndustryType.yaml'
-    Invention:
-      $ref: './schemas/Invention.yaml'
-    Level:
-      $ref: './schemas/Level.yaml'
-    Mail:
-      $ref: './schemas/Mail.yaml'
-    MetadataBuildings:
-      $ref: './schemas/MetadataBuildings.yaml'
-    MetadataCore:
-      $ref: './schemas/MetadataCore.yaml'
-    MetadataInventions:
-      $ref: './schemas/MetadataInventions.yaml'
-    Planet:
-      $ref: './schemas/Planet.yaml'
-    PlanetEvents:
-      $ref: './schemas/PlanetEvents.yaml'
-    ResourceType:
-      $ref: './schemas/ResourceType.yaml'
-    ResourceUnit:
-      $ref: './schemas/ResourceUnit.yaml'
-    Seal:
-      $ref: './schemas/Seal.yaml'
-    Session:
-      $ref: './schemas/Session.yaml'
-    Town:
-      $ref: './schemas/Town.yaml'
+    Visa:
+      $ref: './schemas/Visa.yaml'
     Translation:
       $ref: './schemas/Translation.yaml'
-    Tycoon:
-      $ref: './schemas/Tycoon.yaml'

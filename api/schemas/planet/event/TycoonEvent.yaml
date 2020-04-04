@@ -1,0 +1,14 @@
+type: object
+required:
+  - id
+  - type
+  - eventTime
+
+properties:
+  id:
+    type: string
+  type:
+    type: string
+  eventTime:
+    type: string
+    format: date-time

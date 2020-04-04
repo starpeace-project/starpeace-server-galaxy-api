@@ -1,9 +1,0 @@
-required:
-  - sessionToken
-
-properties:
-  sessionToken:
-    type: string
-
-  tycoonId:
-    type: string

@@ -1,0 +1,22 @@
+type: object
+required:
+  - id
+  - order
+  - progress
+  - spent
+
+properties:
+  id:
+    type: string
+
+  order:
+    type: integer
+    format: int32
+
+  progress:
+    type: integer
+    format: int32
+
+  spent:
+    type: integer
+    format: int32
