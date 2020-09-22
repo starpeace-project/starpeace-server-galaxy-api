@@ -12,15 +12,15 @@ Auto-generated documentation for STARPEACE Multiverse API can be found on the [S
 
 ## Security Vulnerabilities
 
-If you discover a security vulnerability within the STARPEACE API, please send an e-mail to security@starpeace.io or let us a message in the [Discord chatroom](https://discord.gg/TF9Bmsj). All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within the STARPEACE API, please send an e-mail to security@starpeace.io. All security vulnerabilities will be promptly addressed.
 
-## Implementations
+## Server Implementations
 
 * [starpeace-server-multiverse-nodejs](https://github.com/starpeace-project/starpeace-server-multiverse-nodejs) - NodeJS implementation using express
 
 ## Clients
 
-* [starpeace-website-client](https://github.com/starpeace-project/starpeace-website-client) - official community STARPEACE browser-based client [client.starpeace.io](https://client.starpeace.io)
+* [starpeace-client-website](https://github.com/starpeace-project/starpeace-client-website) - official community STARPEACE browser-based client [client.starpeace.io](https://client.starpeace.io)
 
 ## License
 

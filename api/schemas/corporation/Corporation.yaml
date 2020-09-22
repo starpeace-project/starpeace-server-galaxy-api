@@ -1,24 +1,25 @@
 type: object
 required:
   - id
-  - name
   - tycoonId
   - planetId
+  - name
   - buildingCount
 
 properties:
   id:
     type: string
-  name:
-    type: string
   tycoonId:
     type: string
   planetId:
     type: string
+  name:
+    type: string
+  levelId:
+    type: string
   buildingCount:
     type: integer
     format: int32
-
   companies:
     type: array
     items:

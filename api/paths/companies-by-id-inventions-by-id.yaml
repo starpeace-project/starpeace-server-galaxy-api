@@ -21,11 +21,11 @@ put:
 
   responses:
     '200':
-      description: Inventions for Company after starting research
+      description: Invention research that was started
       content:
         application/json:
           schema:
-            $ref: "../openapi.yaml#/components/schemas/invention.CompanyInventions"
+            $ref: "../openapi.yaml#/components/schemas/invention.Invention"
 
     default:
       description: unexpected error
@@ -57,11 +57,7 @@ delete:
 
   responses:
     '200':
-      description: Inventions for Company after selling or canceling research
-      content:
-        application/json:
-          schema:
-            $ref: "../openapi.yaml#/components/schemas/invention.CompanyInventions"
+      description: OK
 
     default:
       description: unexpected error

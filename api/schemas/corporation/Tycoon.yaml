@@ -6,9 +6,10 @@ required:
 properties:
   id:
     type: string
+  username:
+    type: string
   name:
     type: string
-
   corporations:
     type: array
     items:

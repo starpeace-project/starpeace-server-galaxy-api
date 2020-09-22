@@ -1,11 +1,14 @@
 type: object
 required:
   - id
+  - corporationId
   - name
   - sealId
 
 properties:
   id:
+    type: string
+  corporationId:
     type: string
   name:
     type: string

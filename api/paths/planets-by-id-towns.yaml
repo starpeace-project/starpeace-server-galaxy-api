@@ -12,13 +12,6 @@ get:
       description: ID of Planet
       schema:
         type: string
-    - name: lastUpdate
-      in: query
-      description: Lower-bound timestamp for planet events
-      required: true
-      schema:
-        type: string
-        format: date-time
 
   responses:
     '200':

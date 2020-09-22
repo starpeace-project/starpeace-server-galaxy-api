@@ -6,8 +6,7 @@ post:
 
   responses:
     '200':
-      content:
-        application/json:
+      description: OK
 
     default:
       description: unexpected error

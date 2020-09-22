@@ -1,4 +1,6 @@
 required:
+  - visaId
+  - identityType
 
 properties:
   visaId:

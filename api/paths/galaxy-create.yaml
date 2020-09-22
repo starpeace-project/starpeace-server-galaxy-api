@@ -1,6 +1,6 @@
 post:
-  summary: Log into Tycoon starting new authenticated session
-  operationId: login-galaxy
+  summary: Create Tycoon and start new authenticated session
+  operationId: create-galaxy
   tags:
     - galaxy
 

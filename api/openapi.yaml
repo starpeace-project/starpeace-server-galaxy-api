@@ -20,17 +20,15 @@ servers:
 paths:
   /galaxy/metadata:
     $ref: './paths/galaxy-metadata.yaml'
+  /galaxy/create:
+    $ref: './paths/galaxy-create.yaml'
   /galaxy/login:
     $ref: './paths/galaxy-login.yaml'
   /galaxy/logout:
     $ref: './paths/galaxy-logout.yaml'
-  /galaxy/visa:
-    $ref: './paths/galaxy-visa.yaml'
 
-  /planets/{planetId}/buildings:
-    $ref: './paths/planets-by-id-buildings.yaml'
-  /planets/{planetId}/buildings/{buildingId}:
-    $ref: './paths/planets-by-id-buildings-by-id.yaml'
+  /planets/{planetId}/visa:
+    $ref: './paths/planets-by-id-visa.yaml'
 
   /planets/{planetId}/metadata/buildings:
     $ref: './paths/planets-by-id-metadata-buildings.yaml'
@@ -39,6 +37,10 @@ paths:
   /planets/{planetId}/metadata/inventions:
     $ref: './paths/planets-by-id-metadata-inventions.yaml'
 
+  /planets/{planetId}/buildings:
+    $ref: './paths/planets-by-id-buildings.yaml'
+  /planets/{planetId}/corporations:
+    $ref: './paths/planets-by-id-corporations.yaml'
   /planets/{planetId}/events:
     $ref: './paths/planets-by-id-events.yaml'
   /planets/{planetId}/online:
@@ -46,10 +48,11 @@ paths:
   /planets/{planetId}/towns:
     $ref: './paths/planets-by-id-towns.yaml'
 
+  /buildings/{buildingId}:
+    $ref: './paths/buildings-by-id.yaml'
 
   /tycoons/{tycoonId}:
     $ref: './paths/tycoons-by-id.yaml'
-
 
   /corporations/{corporationId}:
     $ref: './paths/corporations-by-id.yaml'
